@@ -1,0 +1,174 @@
+body{
+    margin:0;
+    background-color: #000;
+    color: #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+#header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid gold;
+    padding: 20px 40px;
+}
+
+#nav-bar{
+    display: flex;
+    gap:25px;
+}
+
+#header h1{
+    margin:0;
+    padding: 5px 15px;
+    font-size: 3em;
+    color: gold;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+#header button{
+    display: none;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: transparent;
+    color: gold;
+    font-size: 2em;
+    padding: 5px;
+    border: none;
+}
+
+a:hover, a:active, a.active{
+    border-radius: 2px;
+    border: 1px solid gold;
+}
+
+#insert-data, #edit-data, #show-data, #show-blogcontent{
+    margin: 40px 10px;
+    padding: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+form input, textarea{
+    width: 70%;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    background-color: #222;
+    border: none;
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form button{
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: gold;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover, button:active{
+    transform: scale(1.1);
+}
+
+#show-blogcontent{
+    text-align: center;
+}
+
+#show-blogcontent h1{
+    font-size: 2.2em;
+}
+
+#show-blogcontent h2{
+    font-size: 1.9em;
+}
+
+#show-blogcontent p{
+    font-size: 1.7em;
+}
+
+#show-blogcontent {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+    font-size: 1.5em;
+    color: #aaa;
+}
+
+#blog-post{
+    border: 2px solid gold;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 12px gold;
+    margin:30px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+#blog-post:hover, #blog-post:active{
+    transform: scale(1.02);
+}
+
+#no-blogs{
+    text-align: center;
+}
+
+@media (max-width:768px){
+
+  #header{
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+  }
+
+  #header button{
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+    opacity: 1;
+    display: flex;
+  }
+
+}

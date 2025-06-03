@@ -1,0 +1,6 @@
+Backend/node_modules
+.env
+Backend/package-lock.json
+frontend/node_modules
+frontend/package-lock.json
+eslint.config.js
